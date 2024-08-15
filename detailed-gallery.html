@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>陈秀菁 - 详细相册</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Additional styles for the detailed gallery */
+        .category-selector {
+            margin-bottom: 20px;
+        }
+
+        .category-selector select {
+            padding: 10px;
+            font-size: 16px;
+        }
+
+        .photo-container {
+            column-count: 3;
+            column-gap: 20px;
+        }
+
+        .photo-item {
+            break-inside: avoid;
+            margin-bottom: 20px;
+        }
+
+        .photo-item img {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        @media (max-width: 768px) {
+            .photo-container {
+                column-count: 2;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .photo-container {
+                column-count: 1;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>陈秀菁 - 详细相册</h1>
+            </div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">返回主页</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="section gallery">
+        <div class="container">
+            <h2>相册分类</h2>
+            <div class="category-selector">
+                <select id="categorySelect">
+                    <option value="all">所有照片</option>
+                    <option value="childhood">童年时光</option>
+                    <option value="youth">青春岁月</option>
+                    <option value="family">家庭生活</option>
+                    <option value="career">职业生涯</option>
+                    <option value="hobbies">兴趣爱好</option>
+                </select>
+            </div>
+            <div id="photoContainer" class="photo-container">
+                <!-- Photos will be dynamically added here -->
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>© 2024 纪念 陈秀菁。版权所有。</p>
+                <p>网站由 黄雪嫣 Ng Suit Yan 爱心设计。</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="detailed-gallery.js"></script>
+</body>
+
+</html>

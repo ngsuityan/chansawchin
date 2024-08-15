@@ -20,16 +20,30 @@ document.addEventListener("DOMContentLoaded", function () {
         { src: 'featured4.jpg', alt: 'Featured photo 4' },
     ];
 
-    const timelineEvents = [
-        { date: '1967年2月3日', title: '出生', description: '陈秀菁 诞生于...' },
-        { date: '1985年', title: '高中毕业', description: '在 ... 高中毕业' },
-        { date: '1990年', title: '大学毕业', description: '获得 ... 学位' },
-        { date: '1995年', title: '事业起步', description: '开始在 ... 工作' },
-    ];
+    const lifeStory = `我的妈妈出生于1967年2月3日。从小，她就是一个勤奋好学的人，最终在毕业后成为了一名备受尊敬的补习老师。她教导了许多学生，并且在她的教育生涯中，许多学生都受益匪浅。
+
+在她年轻的时候，妈妈曾在一家豆水豆腐店工作，期间积累了丰富的经验，也结交了许多朋友。1991年12月2日，妈妈迎来了她人生的重要时刻，她与我父亲结婚，开启了他们共同生活的新篇章。
+
+婚后，妈妈的生活变得更加忙碌。1995年，她迎来了我的姐姐；1998年，她生下了我；2003年，她又迎来了我的弟弟。作为一个母亲，她总是不辞辛劳地照顾我们三兄妹，给予我们无尽的爱与关怀。
+
+妈妈一直是个勤劳的女人。她曾经营过美食档口，为家庭提供经济支持；她也曾制作鞋花，手艺精湛，受到许多人的喜爱。随着两个女儿相继进入大学，妈妈开始在一家民宿担任清洁工作。她的工作不仅勤勉，而且细致入微，深得民宿老板和顾客的好评。
+
+尽管妈妈的生活并不富裕，但她总是尽其所能地给我们最好的。她用自己的一生，默默地支持着我们的成长与梦想。
+
+然而，生活并不总是顺遂的。2024年年初，妈妈被确诊患上了淋巴癌。这对我们全家来说是一个巨大的打击，尤其是在我弟弟刚刚开始大学生活的时候。尽管她顽强地与病魔抗争，但最终在2024年7月4日晚上10点02分，她离开了我们，离开了这个她无比珍爱的世界。
+
+妈妈的一生充满了辛劳，但她从未抱怨，总是竭尽全力给予我们最好的。在她短暂的一生中，有过很多坎坷，但也有许多美好的时刻。她是我们的支柱，是我们心中的英雄。虽然她已经离开，但她的爱与教诲将永远留在我们心中，激励我们勇敢前行。`;
+
+    function loadLifeStory() {
+        const lifeStoryContainer = document.getElementById('lifeStoryContent');
+        const paragraph = document.createElement('p');
+        paragraph.textContent = lifeStory;
+        lifeStoryContainer.appendChild(paragraph);
+    }
 
     const quotes = [
-        { quote: "生活中最重要的不是位置，而是方向。", author: "陈秀菁" },
-        { quote: "微笑是世界上最好的化妆品。", author: "陈秀菁" },
+        { quote: "做得到就做,做不到放弃也没关系,开心最重要。", author: "陈秀菁" },
+        { quote: "自己开心最重要。", author: "陈秀菁" },
     ];
 
     function loadLifeImages() {
@@ -89,6 +103,6 @@ document.addEventListener("DOMContentLoaded", function () {
     // Load all content
     loadLifeImages();
     loadFeaturedPhotos();
-    loadTimelineEvents();
+    loadLifeStory();
     loadQuotes();
 });
